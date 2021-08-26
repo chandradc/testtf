@@ -6,18 +6,6 @@ provider "aws" {
 
 }
 
-
-terraform {
- backend "remote" {
- hostname = "app.terraform.io"
- organization = "chandradctf"
- workspaces {
- name = "testtf"
- }
- }
-}
-
-
 resource "aws_s3_bucket" "mybucket" {
   bucket = "chandradc-1040"
   acl    = "private"
